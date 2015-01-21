@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html  ng-app='calcApp'>
+
+<head>
+	<title>Complex Number Calculator</title>
+	<script src='./bower_components/angular/angular.min.js'></script>
+	<script src='./calculator.js'></script>
+</head>
+
+<body ng-controller='calcController'>
+	<h1>Complex Number Calculator</h1>
+	<h3>Expression: 
+		<div>{{calcInput}}</div>
+	</h3>
+
+	<h3>Solution:
+		<div>{{solution}}</div>
+	</h3>
+	
+	<div class='row'>
+		<button ng-click='addOne()'>1</button>
+		<button ng-click='addTwo()'>2</button>
+		<button ng-click='addThree()'>3</button>
+		<button ng-click='addLeftParens()'>(</button>
+		<button ng-click='addRightParens()'>)</button>
+	</div>
+	<div class='row'>
+		<button ng-click='addFour()'>4</button>
+		<button ng-click='addFive()'>5</button>
+		<button ng-click='addSix()'>6</button>
+		<button ng-click='addPlus()'>+</button>
+		<button ng-click='addMinus()'>-</button>
+	</div>
+	<div class='row'>
+		<button ng-click='addSeven()'>7</button>
+		<button ng-click='addEight()'>8</button>
+		<button ng-click='addNine()'>9</button>
+		<button ng-click='addMultiply()'>x</button>
+		<button ng-click='addDivide()'>/</button>
+	</div>
+		<div class='row'>
+		<button ng-click='addZero()'>0</button>
+		<button ng-click='addDecimal()'>.</button>
+		<button ng-click='addBackspace()'> <- </button>
+		<button ng-click='addi()'>i</button>
+		<button ng-click='solve()'>=</button>
+	</div>
+	<div>
+		<button ng-click='clear()'>CLEAR</button>
+	</div>
+
+	<h3>Instructions:</h3>
+	<p>Complex number expressions must in the form (a+bi)[operator](c+di).</p>	
+</body>
+
+</html>
